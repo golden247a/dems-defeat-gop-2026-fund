@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dems Defeat GOP 2026 Fund</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;600;800&family=Newsreader:opsz,wght@6..72,400;6..72,600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F4F6FA; --ink:#0F1B2D; --muted:#5A6678; --line:#D5DBE6;
+    --blue:#1F4FD8; --blue-dark:#173BA6;
+    --toss:#B45309; --lean:#1F4FD8; --likely:#0F766E; --unset:#8A94A6;
+    --card:#FFFFFF;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:"Newsreader",Georgia,serif;background:var(--paper);color:var(--ink);line-height:1.55;font-size:18px}
+  h1,h2,h3,.ui{font-family:"Archivo",system-ui,sans-serif}
+  a{color:inherit}
+  :focus-visible{outline:3px solid var(--blue);outline-offset:2px}
+
+  header{padding:28px 20px 8px;max-width:1240px;margin:0 auto}
+  header h1{font-size:clamp(28px,5vw,46px);font-weight:800;letter-spacing:-.02em;line-height:1.05}
+  header p{color:var(--muted);max-width:60ch;margin-top:10px}
+
+  /* Daily picture */
+  .daily{max-width:1240px;margin:20px auto 0;padding:0 20px}
+  .daily figure{position:relative;border-radius:6px;overflow:hidden;background:#dfe5f0;aspect-ratio:21/8;min-height:180px}
+  .daily img{width:100%;height:100%;object-fit:cover;display:block}
+  .daily figcaption{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;color:#fff;
+    background:linear-gradient(transparent,rgba(15,27,45,.85));font-family:"Archivo",sans-serif;font-size:15px}
+  .daily .empty{position:absolute;inset:0;display:grid;place-items:center;color:var(--muted);font-family:"Archivo",sans-serif;padding:20px;text-align:center}
+
+  /* Three columns */
+  main{max-width:1240px;margin:28px auto 0;padding:0 20px;display:grid;gap:24px;grid-template-columns:repeat(3,1fr);align-items:start}
+  @media (max-width:900px){main{grid-template-columns:1fr}}
+  
+  .card{background:var(--card);border:1px solid var(--line);border-radius:6px;overflow:hidden;margin-bottom:20px}
+  .photo{aspect-ratio:4/3;background:#dfe5f0;position:relative}
+  .photo img{width:100%;height:100%;object-fit:cover;display:block}
+  .photo .initials{position:absolute;inset:0;display:grid;place-items:center;font-family:"Archivo",sans-serif;font-weight:800;font-size:56px;color:#8FA0BE}
+  .body{padding:18px}
+  .body h3{font-size:24px;font-weight:800;letter-spacing:-.01em}
+  .race{color:var(--muted);font-family:"Archivo",sans-serif;font-size:15px;margin-top:2px}
+  .bio{margin-top:12px}
+
+  .stats{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:16px}
+  .stat{border:1px solid var(--line);border-radius:4px;padding:10px 12px}
+  .stat .k{font-family:"Archivo",sans-serif;font-size:13px;color:var(--muted)}
+  .stat .v{font-family:"Archivo",sans-serif;font-weight:800;font-size:22px;margin-top:2px}
+  .stat .src{font-family:"Archivo",sans-serif;font-size:12px;color:var(--muted);margin-top:2px}
+  .badge{display:inline-block;padding:2px 10px;border-radius:999px;color:#fff;font-size:15px;font-weight:600}
+  .badge.toss{background:var(--toss)} .badge.lean{background:var(--lean)} .badge.likely{background:var(--likely)} .badge.unset{background:var(--unset)} .badge.rep{background:#B91C1C}
+
+  .policies{margin:16px 0 0 20px}
+  .policies li{margin-bottom:4px}
+
+  .donate{display:block;width:100%;margin-top:18px;padding:14px 16px;border:0;border-radius:4px;background:var(--blue);color:#fff;
+    font-family:"Archivo",sans-serif;font-weight:800;font-size:17px;text-align:center;text-decoration:none;cursor:pointer}
+  .donate:hover{background:var(--blue-dark)}
+  .donate[aria-disabled="true"]{background:#B9C2D3;cursor:not-allowed}
+  .donate-note{font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--muted);margin-top:8px}
+
+  footer{max-width:1240px;margin:16px auto 48px;padding:20px;border-top:1px solid var(--line);color:var(--muted);font-family:"Archivo",sans-serif;font-size:14px}
+  footer strong{color:var(--ink)}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+  /* Tabs */
+  nav.tabs{max-width:1240px;margin:20px auto 0;padding:0 20px;display:flex;gap:8px;border-bottom:1px solid var(--line)}
+  nav.tabs button{font-family:"Archivo",sans-serif;font-weight:800;font-size:16px;background:none;border:none;
+    padding:12px 18px;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;margin-bottom:-1px}
+  nav.tabs button.active{color:var(--ink);border-bottom-color:var(--blue)}
+  nav.tabs button:hover{color:var(--ink)}
+
+  main{max-width:1240px;margin:0 auto;padding:24px 20px 0;display:block}
+  .page{display:none}
+  .page.active{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:20px;align-items:start}
+  .page > .none{color:var(--muted);font-style:italic;grid-column:1/-1}
+
+  .notes{margin-top:14px}
+  .notes label{display:block;font-family:"Archivo",sans-serif;font-size:12.5px;color:var(--muted);margin-bottom:4px}
+  .notes textarea{width:100%;min-height:64px;resize:vertical;border:1px solid var(--line);border-radius:4px;
+    padding:8px 10px;font-family:"Newsreader",Georgia,serif;font-size:15px;color:var(--ink);background:#FCFDFF}
+  .notes .saved{font-family:"Archivo",sans-serif;font-size:11.5px;color:var(--muted);margin-top:3px;visibility:hidden}
+  .notes .saved.show{visibility:visible}
+
+  .article-card{background:var(--card);border:1px solid var(--line);border-radius:6px;padding:18px 20px;margin-bottom:16px}
+  .article-card h3{font-size:20px;font-weight:800}
+  .article-card .meta{font-family:"Archivo",sans-serif;font-size:13px;color:var(--muted);margin-top:2px}
+  .article-card .body{margin-top:10px;white-space:pre-wrap}
+  .article-card a.src-link{font-family:"Archivo",sans-serif;font-size:13px;display:inline-block;margin-top:10px}
+  .add-article{background:var(--card);border:1px dashed var(--line);border-radius:6px;padding:18px 20px;margin-bottom:20px;grid-column:1/-1}
+  .add-article h3{font-family:"Archivo",sans-serif;font-size:16px;margin-bottom:10px}
+  .add-article input, .add-article textarea{width:100%;border:1px solid var(--line);border-radius:4px;padding:8px 10px;
+    font-family:"Newsreader",Georgia,serif;font-size:15px;margin-bottom:8px;background:#FCFDFF}
+  .add-article textarea{min-height:80px;resize:vertical}
+  .add-article .row{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .add-article button{font-family:"Archivo",sans-serif;font-weight:800;font-size:14px;background:var(--blue);color:#fff;
+    border:0;border-radius:4px;padding:9px 16px;cursor:pointer}
+  .add-article button:hover{background:var(--blue-dark)}
+</style>
+</head>
+<body>
+
+<header>
+  <h1>Dems Defeat GOP 2026 Fund</h1>
+  <p>Candidate profiles, race ratings, and polling for the 2026 elections.</p>
+</header>
+
+<section class="daily" aria-label="Picture of the day">
+  <figure id="daily"></figure>
+</section>
+
+<nav class="tabs" role="tablist" aria-label="Site section">
+  <button type="button" role="tab" data-cat="house" aria-selected="false">House</button>
+  <button type="button" role="tab" data-cat="senate" aria-selected="false">Senate</button>
+  <button type="button" role="tab" data-cat="governor" aria-selected="false">Governor</button>
+  <button type="button" role="tab" data-cat="articles" aria-selected="false">Articles</button>
+</nav>
+
+<main>
+  <section class="page" id="page-house" role="tabpanel" aria-label="House races"></section>
+  <section class="page" id="page-senate" role="tabpanel" aria-label="Senate races"></section>
+  <section class="page" id="page-governor" role="tabpanel" aria-label="Governor races"></section>
+  <section class="page" id="page-articles" role="tabpanel" aria-label="Articles about the election"></section>
+</main>
+
+<footer>
+  <p id="disclaimer"></p>
+</footer>
+
+<script>
+/* =========================================================
+   1. SITE SETTINGS  — edit these
+   ========================================================= */
+const SETTINGS = {
+  // Who operates this site. Political sites should say who paid for them.
+  paidForBy: "",            // e.g. "Paid for by Your Name / Your Committee. Not authorized by any candidate."
+
+  // Where the DONATE buttons go. Leave "" until you decide.
+  // Put your own donation page here (one link for the whole site).
+  donateUrl: "",
+
+  // What you tell donors about where the money goes. Must be true.
+  donateNote: "",           // e.g. "Donations go to [exactly who receives them]."
+
+  // Optional: a JSON file you host next to index.html to update polls without editing this file.
+  // Same shape as CANDIDATES below. Leave "" to use the data in this file.
+  feedUrl: ""               // e.g. "polls.json"
+};
+
+/* =========================================================
+   2. PICTURE OF THE DAY — add image URLs you have the right to use.
+   One is shown per day, rotating automatically.
+   ========================================================= */
+const DAILY_PICTURES = [
+  // { url: "images/rally1.jpg", caption: "Volunteers in Detroit", credit: "Photo: ..." },
+];
+
+/* =========================================================
+   3. CANDIDATES — add one object per candidate.
+   category: "senate" | "house" | "governor"
+   rating:   "Toss-up" | "Lean D" | "Likely D" | "Likely R" | ""   (ratingSource: who rated it, and when)
+   poll:     { value: "48%", opponent: "45%", source: "Name of poll", date: "Sep 17" }  or null
+   Only enter polls and ratings you have checked against the original source.
+   These are not truly "live" — no public feed pushes new poll numbers automatically.
+   To refresh: search for the newest poll for that race, confirm it against the
+   pollster's own release, and replace the value/date here (or in polls.json if you use feedUrl).
+   Visitors can type their own notes under each card — those notes stay only on that
+   visitor's own device (saved in their browser), not shared with you or other visitors.
+   ========================================================= */
+let CANDIDATES = [
+  {
+    "category": "senate",
+    "name": "Roy Cooper",
+    "state": "North Carolina",
+    "race": "U.S. Senate (open seat) vs. Michael Whatley (R)",
+    "photo": "",
+    "bio": "Former two-term governor of North Carolina.",
+    "policies": [],
+    "rating": "Lean D",
+    "ratingSource": "Cook, Jun 11, 2026",
+    "poll": {
+      "value": "50%",
+      "opponent": "43%",
+      "source": "NYT/Siena College",
+      "date": "late Jun 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Sherrod Brown",
+    "state": "Ohio",
+    "race": "U.S. Senate (special) vs. Sen. Jon Husted (R)",
+    "photo": "",
+    "bio": "Former U.S. senator from Ohio.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook",
+    "poll": {
+      "value": "47%",
+      "opponent": "50%",
+      "source": "NYT/Siena College (Husted)",
+      "date": "early Jul 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Troy Jackson",
+    "state": "Maine",
+    "race": "U.S. Senate vs. Sen. Susan Collins (R)",
+    "photo": "",
+    "bio": "Former Maine Senate president and logger. Nominated by Maine Democrats on July 25, 2026.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Apr 13, 2026",
+    "poll": {
+      "value": "47%",
+      "opponent": "48%",
+      "source": "NOTUS poll of pre-nomination field",
+      "date": "Jul 9, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Mary Peltola",
+    "state": "Alaska",
+    "race": "U.S. Senate vs. Sen. Dan Sullivan (R)",
+    "photo": "",
+    "bio": "Former U.S. representative for Alaska.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook",
+    "poll": {
+      "value": "45%",
+      "opponent": "47%",
+      "source": "NYT/Siena College (Sullivan)",
+      "date": "early Jul 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Abdul El-Sayed",
+    "state": "Michigan",
+    "race": "U.S. Senate (open seat) vs. Rep. Mike Rogers (R)",
+    "photo": "",
+    "bio": "Epidemiologist. Won the Aug. 4, 2026 Democratic primary.",
+    "policies": [
+      "Medicare for All",
+      "Cancel medical debt",
+      "Restore reproductive rights"
+    ],
+    "rating": "Toss-up",
+    "ratingSource": "Cook",
+    "poll": {
+      "value": "48%",
+      "opponent": "46%",
+      "source": "The Hill/Emerson College Polling",
+      "date": "Sep 18, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "James Talarico",
+    "state": "Texas",
+    "race": "U.S. Senate vs. Ken Paxton (R)",
+    "photo": "",
+    "bio": "Texas state representative.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Aug 20, 2026",
+    "poll": {
+      "value": "47%",
+      "opponent": "47%",
+      "source": "NYT/Siena College (tied)",
+      "date": "early Jul 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Chris Pappas",
+    "state": "New Hampshire",
+    "race": "U.S. Senate (open seat) vs. John E. Sununu (R)",
+    "photo": "",
+    "bio": "U.S. representative from New Hampshire.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 15, 2026",
+    "poll": {
+      "value": "43%",
+      "opponent": "45%",
+      "source": "UNH Survey Center (Sununu)",
+      "date": "Aug 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Josh Turek",
+    "state": "Iowa",
+    "race": "U.S. Senate (open seat) vs. Rep. Ashley Hinson (R)",
+    "photo": "",
+    "bio": "Iowa state representative.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Aug 20, 2026",
+    "poll": {
+      "value": "46%",
+      "opponent": "48%",
+      "source": "NYT/Siena College (Hinson)",
+      "date": "early Jul 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Jon Ossoff",
+    "state": "Georgia",
+    "race": "U.S. Senate, incumbent, vs. Rep. Mike Collins (R)",
+    "photo": "",
+    "bio": "Incumbent U.S. senator seeking a second term.",
+    "policies": [],
+    "rating": "Lean D",
+    "ratingSource": "Cook, Apr 2026",
+    "poll": {
+      "value": "48.2%",
+      "opponent": "44.4%",
+      "source": "Quantus Insights",
+      "date": "Sep 14-16, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "senate",
+    "name": "Peggy Flanagan",
+    "state": "Minnesota",
+    "race": "U.S. Senate (open seat) vs. Michele Tafoya (R)",
+    "photo": "",
+    "bio": "Lieutenant governor of Minnesota. Won the Aug. 11, 2026 primary.",
+    "policies": [],
+    "rating": "Likely D",
+    "ratingSource": "Cook",
+    "poll": {
+      "value": "43%",
+      "opponent": "42%",
+      "source": "co/efficient",
+      "date": "Sep 15, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Amy Acton",
+    "state": "Ohio",
+    "race": "Governor (open seat)",
+    "photo": "",
+    "bio": "Democratic nominee for governor of Ohio.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Jul 2026",
+    "poll": {
+      "value": "46%",
+      "opponent": "47%",
+      "source": "Impact Research (Ramaswamy)",
+      "date": "Jul 24-28, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Jonathan Kreiss-Tomkins",
+    "state": "Alaska",
+    "race": "Governor (open seat)",
+    "photo": "",
+    "bio": "Former Alaska state representative.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 2026",
+    "poll": {
+      "value": "40%",
+      "opponent": "20% (Wilson)",
+      "source": "AARP poll, 4-way field",
+      "date": "Sep 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Katie Hobbs",
+    "state": "Arizona",
+    "race": "Governor, incumbent, vs. Rep. Andy Biggs (R)",
+    "photo": "",
+    "bio": "Incumbent governor of Arizona.",
+    "policies": [],
+    "rating": "Lean D",
+    "ratingSource": "Cook, Jul 2026",
+    "poll": {
+      "value": "49.5%",
+      "opponent": "34.3%",
+      "source": "HighGround",
+      "date": "Aug 24, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Gina Hinojosa",
+    "state": "Texas",
+    "race": "Governor vs. Gov. Greg Abbott (R)",
+    "photo": "",
+    "bio": "Texas state representative.",
+    "policies": [],
+    "rating": "Likely R",
+    "ratingSource": "Cook, Aug 20, 2026",
+    "poll": {
+      "value": "49%",
+      "opponent": "45%",
+      "source": "ReconMR/Siena Research Institute",
+      "date": "Sep 18, 2026"
+    },
+    "updated": "Sep 21, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Cinde Warmington",
+    "state": "New Hampshire",
+    "race": "Governor vs. Kelly Ayotte (R, incumbent)",
+    "photo": "",
+    "bio": "Former New Hampshire executive councilor.",
+    "policies": [],
+    "rating": "Likely R",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Aaron Ford",
+    "state": "Nevada",
+    "race": "Governor vs. Joe Lombardo (R, incumbent)",
+    "photo": "",
+    "bio": "Nevada Attorney General.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Cindy Holscher",
+    "state": "Kansas",
+    "race": "Governor (open seat) vs. Ty Masterson (R)",
+    "photo": "",
+    "bio": "Kansas state senator.",
+    "policies": [],
+    "rating": "Lean R",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Rob Sand",
+    "state": "Iowa",
+    "race": "Governor (open seat) vs. Zach Lahn (R)",
+    "photo": "",
+    "bio": "Iowa State Auditor, the state's only Democratic statewide officeholder.",
+    "policies": [],
+    "rating": "Lean D",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "David Crowley",
+    "state": "Wisconsin",
+    "race": "Governor (open seat) vs. Tom Tiffany (R)",
+    "photo": "",
+    "bio": "Milwaukee County Executive.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Jocelyn Benson",
+    "state": "Michigan",
+    "race": "Governor (open seat) vs. John James (R)",
+    "photo": "",
+    "bio": "Michigan Secretary of State.",
+    "policies": [],
+    "rating": "Lean D",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": {
+      "value": "49%",
+      "opponent": "42%",
+      "source": "Emerson College/Nexstar Media",
+      "date": "Sep 18, 2026"
+    },
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Keisha Lance Bottoms",
+    "state": "Georgia",
+    "race": "Governor (open seat) vs. Rick Jackson (R)",
+    "photo": "",
+    "bio": "Former Mayor of Atlanta.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": {
+      "value": "45%",
+      "opponent": "48%",
+      "source": "Rasmussen Reports",
+      "date": "Sep 15, 2026"
+    },
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "David Jolly",
+    "state": "Florida",
+    "race": "Governor (open seat) vs. Byron Donalds (R)",
+    "photo": "",
+    "bio": "Former Republican U.S. representative, joined the Democratic Party in 2025.",
+    "policies": [],
+    "rating": "Likely R",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "governor",
+    "name": "Amanda Janoo",
+    "state": "Vermont",
+    "race": "Governor vs. Phil Scott (R, incumbent)",
+    "photo": "",
+    "bio": "Economist.",
+    "policies": [],
+    "rating": "Solid R",
+    "ratingSource": "Cook, Sep 17, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Amish Shah",
+    "state": "Arizona",
+    "race": "AZ-01 (open seat) vs. Jay Feely (R)",
+    "photo": "",
+    "bio": "Former Arizona state representative and physician.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "JoAnna Mendoza",
+    "state": "Arizona",
+    "race": "AZ-06 vs. Rep. Juan Ciscomani (R)",
+    "photo": "",
+    "bio": "Former U.S. Marine Corps drill instructor.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Randy Villegas",
+    "state": "California",
+    "race": "CA-22 vs. Rep. David Valadao (R)",
+    "photo": "",
+    "bio": "Local school board member in California's Central Valley.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Manny Rutinel",
+    "state": "Colorado",
+    "race": "CO-08 vs. Rep. Gabe Evans (R)",
+    "photo": "",
+    "bio": "Environmental attorney and Colorado state representative.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Kathy Castor",
+    "state": "Florida",
+    "race": "FL-14, incumbent, vs. Mike Beltran (R)",
+    "photo": "",
+    "bio": "Incumbent U.S. representative for the Tampa Bay area, running in a newly redrawn district.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Jared Moskowitz",
+    "state": "Florida",
+    "race": "FL-25, incumbent, vs. Scott Singer (R)",
+    "photo": "",
+    "bio": "Incumbent U.S. representative, running in a newly redrawn South Florida district.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Christina Bohannan",
+    "state": "Iowa",
+    "race": "IA-01 vs. Rep. Mariannette Miller-Meeks (R)",
+    "photo": "",
+    "bio": "Law professor; lost this seat by fewer than 800 votes in 2024.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Sarah Trone Garriott",
+    "state": "Iowa",
+    "race": "IA-03 vs. Rep. Zach Nunn (R)",
+    "photo": "",
+    "bio": "Iowa state senator representing part of the Des Moines area.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Will Lawrence",
+    "state": "Michigan",
+    "race": "MI-07 vs. Rep. Tom Barrett (R)",
+    "photo": "",
+    "bio": "Community organizer running in the Lansing-area district.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Christina Hines",
+    "state": "Michigan",
+    "race": "MI-10 (open seat) vs. Michael Bouchard (R)",
+    "photo": "",
+    "bio": "Local prosecutor running for this open Macomb County seat.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Rebecca Bennett",
+    "state": "New Jersey",
+    "race": "NJ-07 vs. Rep. Tom Kean Jr. (R)",
+    "photo": "",
+    "bio": "Former U.S. Navy helicopter pilot.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Marcy Kaptur",
+    "state": "Ohio",
+    "race": "OH-09, incumbent, vs. Derek Merrin (R)",
+    "photo": "",
+    "bio": "The longest-serving woman in the history of Congress, defending a heavily redrawn district.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Brian Poindexter",
+    "state": "Ohio",
+    "race": "OH-07 vs. Rep. Max Miller (R)",
+    "photo": "",
+    "bio": "Ironworker and union leader.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Bob Brooks",
+    "state": "Pennsylvania",
+    "race": "PA-07 vs. Rep. Ryan Mackenzie (R)",
+    "photo": "",
+    "bio": "President of the Pennsylvania state firefighters union.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Paige Cognetti",
+    "state": "Pennsylvania",
+    "race": "PA-08 vs. Rep. Rob Bresnahan (R)",
+    "photo": "",
+    "bio": "Mayor of Scranton.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Janelle Stelson",
+    "state": "Pennsylvania",
+    "race": "PA-10 vs. Rep. Scott Perry (R)",
+    "photo": "",
+    "bio": "Former television news anchor; came within about 5,100 votes of winning this seat in 2024.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Vicente Gonzalez",
+    "state": "Texas",
+    "race": "TX-34, incumbent, vs. Eric Flores (R)",
+    "photo": "",
+    "bio": "Incumbent U.S. representative for South Texas's Gulf Coast.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Elaine Luria",
+    "state": "Virginia",
+    "race": "VA-02 vs. Rep. Jen Kiggans (R)",
+    "photo": "",
+    "bio": "Former U.S. representative and Navy veteran seeking to reclaim this Hampton Roads seat.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Marie Gluesenkamp Perez",
+    "state": "Washington",
+    "race": "WA-03, incumbent, vs. John Braun (R)",
+    "photo": "",
+    "bio": "Incumbent U.S. representative and small business owner.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Rebecca Cooke",
+    "state": "Wisconsin",
+    "race": "WI-03 vs. Rep. Derrick Van Orden (R)",
+    "photo": "",
+    "bio": "Small business owner running in western Wisconsin.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook Political Report, Sep 11, 2026",
+    "poll": null,
+    "updated": "Sep 22, 2026"
+  },
+  {
+    "category": "house",
+    "name": "Cait Conley",
+    "state": "New York",
+    "race": "NY-17 vs. Rep. Mike Lawler (R)",
+    "photo": "",
+    "bio": "Army veteran and former NSC staffer.",
+    "policies": [],
+    "rating": "Toss-up",
+    "ratingSource": "Cook, Sep 11, 2026",
+    "poll": {
+      "value": "45%",
+      "opponent": "50%",
+      "source": "co/efficient (Lawler)",
+      "date": "Sep 2026"
+    },
+    "updated": "Sep 22, 2026"
+  }
+];
+
+/* =========================================================
+   Rendering (no need to edit below)
+   ========================================================= */
+const $ = (id) => document.getElementById(id);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+
+function ratingClass(r){
+  const t = (r||"").toLowerCase();
+  if(t.startsWith("toss")) return "toss";
+  if(/\br$/.test(t)) return "rep";
+  if(t.startsWith("lean")) return "lean";
+  if(t.startsWith("likely")||t.startsWith("safe")) return "likely";
+  return "unset";
+}
+
+function renderDaily(){
+  const el = $("daily");
+  if(!DAILY_PICTURES.length){
+    el.innerHTML = '<div class="empty">Picture of the day: add images in DAILY_PICTURES.</div>';
+    return;
+  }
+  const day = Math.floor(Date.now()/86400000);
+  const p = DAILY_PICTURES[day % DAILY_PICTURES.length];
+  el.innerHTML = `<img src="${esc(p.url)}" alt="${esc(p.caption||"Picture of the day")}">` +
+    `<figcaption>${esc(p.caption||"")}${p.credit?` <span style="opacity:.8">— ${esc(p.credit)}</span>`:""}</figcaption>`;
+}
+
+function initials(name){ return name.split(/\s+/).map(w=>w[0]).slice(0,2).join("").toUpperCase(); }
+
+function cardHTML(c){
+  const rating = c.rating || "Not set";
+  const poll = c.poll
+    ? `<div class="v">${esc(c.poll.value)} – ${esc(c.poll.opponent)}</div><div class="src">${esc(c.poll.source)}${c.poll.date?`, ${esc(c.poll.date)}`:""}</div>`
+    : `<div class="v">—</div><div class="src">No poll added</div>`;
+  const photo = c.photo
+    ? `<img src="${esc(c.photo)}" alt="${esc(c.name)}" onerror="this.remove()">`
+    : "";
+  const donateReady = !!SETTINGS.donateUrl;
+  const donate = donateReady
+    ? `<a class="donate" href="${esc(SETTINGS.donateUrl)}" rel="noopener">Donate</a>`
+    : `<a class="donate" aria-disabled="true" role="link" tabindex="-1">Donate link not set</a>`;
+  return `
+  <article class="card">
+    <div class="photo"><div class="initials" aria-hidden="true">${esc(initials(c.name))}</div>${photo}</div>
+    <div class="body">
+      <h3>${esc(c.name)}</h3>
+      <div class="race">${esc(c.state)} · ${esc(c.race)}</div>
+      ${c.bio?`<p class="bio">${esc(c.bio)}</p>`:""}
+      <div class="stats">
+        <div class="stat"><div class="k">Race rating</div><div class="v"><span class="badge ${ratingClass(c.rating)}">${esc(rating)}</span></div>${c.ratingSource?`<div class="src">${esc(c.ratingSource)}</div>`:""}</div>
+        <div class="stat"><div class="k">Latest poll</div>${poll}</div>
+      </div>
+      ${c.policies&&c.policies.length?`<ul class="policies">${c.policies.map(p=>`<li>${esc(p)}</li>`).join("")}</ul>`:""}
+      ${donate}
+      ${SETTINGS.donateNote?`<p class="donate-note">${esc(SETTINGS.donateNote)}</p>`:""}
+      ${c.updated?`<p class="donate-note">Updated ${esc(c.updated)}</p>`:""}
+      ${notesHTML(c)}
+    </div>
+  </article>`;
+}
+
+function candidateKey(c){ return (c.category+":"+c.name).toLowerCase().replace(/[^a-z0-9:]+/g,"-"); }
+
+function notesHTML(c){
+  const key = "notes:"+candidateKey(c);
+  let saved = "";
+  try{ saved = localStorage.getItem(key) || ""; }catch(e){}
+  return `
+  <div class="notes">
+    <label for="${key}">Your notes</label>
+    <textarea id="${key}" data-key="${key}" placeholder="Write anything you want to remember about this race…">${esc(saved)}</textarea>
+    <div class="saved" data-savedfor="${key}">Saved</div>
+  </div>`;
+}
+
+function render(){
+  ["house","senate","governor"].forEach(cat=>{
+    const items = CANDIDATES.filter(c=>c.category===cat);
+    const html = items.length
+      ? items.map(c => cardHTML(c) ).join("")
+      : '<p class="none">No candidates added yet.</p>';
+    $("page-"+cat).innerHTML = html;
+  });
+  $("disclaimer").innerHTML = SETTINGS.paidForBy
+    ? `<strong>${esc(SETTINGS.paidForBy)}</strong>`
+    : "Add your “paid for by” disclaimer in SETTINGS.paidForBy.";
+  wireNotes();
+  renderArticles();
+}
+
+/* ---------- Articles: general election-race writeups, not tied to one candidate ----------
+   Saved in this visitor's own browser only (localStorage) — like the notes boxes, these are
+   NOT shared with you or with other visitors. To publish articles everyone sees, they'd need
+   to go in this file's data (or a small backend) instead. */
+function loadArticles(){
+  try{ return JSON.parse(localStorage.getItem("articles") || "[]"); }catch(e){ return []; }
+}
+function saveArticles(list){
+  try{ localStorage.setItem("articles", JSON.stringify(list)); }catch(e){}
+}
+
+function renderArticles(){
+  const host = $("page-articles");
+  const list = loadArticles();
+  const formHTML = `
+    <div class="add-article">
+      <h3>Add an article</h3>
+      <input id="art-title" type="text" placeholder="Headline">
+      <div class="row">
+        <input id="art-source" type="text" placeholder="Source (e.g. AP News)">
+        <input id="art-url" type="url" placeholder="Link (optional)">
+      </div>
+      <textarea id="art-body" placeholder="Paste the article text, or your own summary…"></textarea>
+      <button type="button" id="art-add-btn">Add article</button>
+    </div>`;
+  const cardsHTML = list.length
+    ? list.slice().reverse().map(a => `
+      <article class="article-card" data-id="${esc(a.id)}">
+        <h3>${esc(a.title || "Untitled")}</h3>
+        <div class="meta">${esc(a.source||"")}${a.date?` · ${esc(a.date)}`:""}</div>
+        ${a.body ? `<div class="body">${esc(a.body)}</div>` : ""}
+        ${a.url ? `<a class="src-link" href="${esc(a.url)}" target="_blank" rel="noopener">Read source ↗</a>` : ""}
+        <br><button type="button" class="remove" data-remove="${esc(a.id)}" style="margin-top:10px;background:none;border:1px solid var(--line);border-radius:4px;padding:5px 10px;font-family:'Archivo',sans-serif;font-size:12.5px;color:var(--muted);cursor:pointer">Remove</button>
+      </article>`).join("")
+    : '<p class="none">No articles added yet.</p>';
+
+  host.innerHTML = formHTML + cardsHTML;
+
+  $("art-add-btn").addEventListener("click", ()=>{
+    const title = $("art-title").value.trim();
+    const source = $("art-source").value.trim();
+    const url = $("art-url").value.trim();
+    const body = $("art-body").value.trim();
+    if(!title && !body) return;
+    const items = loadArticles();
+    items.push({
+      id: Date.now()+"-"+Math.random().toString(36).slice(2,7),
+      title, source, url, body,
+      date: new Date().toLocaleDateString(undefined,{year:"numeric",month:"short",day:"numeric"})
+    });
+    saveArticles(items);
+    renderArticles();
+  });
+
+  host.querySelectorAll("[data-remove]").forEach(btn=>{
+    btn.addEventListener("click", ()=>{
+      const id = btn.dataset.remove;
+      saveArticles(loadArticles().filter(a=>a.id!==id));
+      renderArticles();
+    });
+  });
+}
+
+function wireNotes(){
+  document.querySelectorAll(".notes textarea").forEach(ta=>{
+    ta.addEventListener("input", ()=>{
+      const key = ta.dataset.key;
+      try{ localStorage.setItem(key, ta.value); }catch(e){}
+      const flag = document.querySelector(`.saved[data-savedfor="${key}"]`);
+      if(flag){
+        flag.classList.add("show");
+        clearTimeout(flag._t);
+        flag._t = setTimeout(()=>flag.classList.remove("show"), 1200);
+      }
+    });
+  });
+}
+
+function setActiveTab(cat){
+  document.querySelectorAll("nav.tabs button").forEach(b=>{
+    const on = b.dataset.cat===cat;
+    b.classList.toggle("active", on);
+    b.setAttribute("aria-selected", on ? "true":"false");
+  });
+  document.querySelectorAll("main .page").forEach(p=>{
+    p.classList.toggle("active", p.id === "page-"+cat);
+  });
+  try{ localStorage.setItem("activeTab", cat); }catch(e){}
+}
+
+function initTabs(){
+  document.querySelectorAll("nav.tabs button").forEach(b=>{
+    b.addEventListener("click", ()=>setActiveTab(b.dataset.cat));
+  });
+  let start = "house";
+  try{ start = localStorage.getItem("activeTab") || "house"; }catch(e){}
+  setActiveTab(start);
+}
+
+async function loadFeed(){
+  if(!SETTINGS.feedUrl) return;
+  try{
+    const r = await fetch(SETTINGS.feedUrl, {cache:"no-store"});
+    if(r.ok){ CANDIDATES = await r.json(); }
+  }catch(e){ /* keep in-file data */ }
+}
+
+renderDaily();
+render();
+initTabs();
+loadFeed().then(()=>{render(); initTabs();});
+setInterval(()=>loadFeed().then(render), 5*60*1000); // refresh every 5 minutes
+</script>
+</body>
+</html>
